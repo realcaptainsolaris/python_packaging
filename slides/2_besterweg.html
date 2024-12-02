@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/reveal.js/dist/theme/black.css"
+      id="theme"
+    />
+    <!-- Include Highlight.js styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Die beste Methode zur Verwaltung von Abhängigkeiten</h2>
+          <p>Zwei grundlegende Voraussetzungen:</p>
+          <ul>
+            <li class="fragment"><strong>Versionskontrolle</strong></li>
+            <li class="fragment"><strong>Umgebungsisolation</strong></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Voraussetzungen: Versionskontrolle</h2>
+          <ul>
+            <li class="fragment">
+              Code wird in Git oder einem ähnlichen System nachverfolgt
+            </li>
+            <li class="fragment">Ermöglicht Rückkehr zu früheren Ständen</li>
+            <li class="fragment">
+              Deklarationsdateien müssen ebenfalls versioniert sein
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Voraussetzungen: Umgebungsisolation</h2>
+          <ul>
+            <li class="fragment">Trennung der Umgebung vom Hostsystem</li>
+            <li class="fragment">Vermeidet Konflikte zwischen Projekten</li>
+            <li class="fragment">
+              Beispiele: Virtuelle Python-Umgebungen, Container
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Schritte für gutes Abhängigkeitsmanagement</h2>
+          <ul>
+            <li class="fragment">
+              Erstellen einer <strong>Definitionsdatei</strong>
+            </li>
+            <li class="fragment">
+              Generieren einer <strong>Sperrdatei (Lock-File)</strong>
+            </li>
+            <li class="fragment">
+              Synchronisieren der Umgebung mit der Sperrdatei
+            </li>
+            <li class="fragment">
+              Versionieren von Definitions- und Sperrdateien
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Warum eine Definitionsdatei?</h2>
+          <ul>
+            <li class="fragment">
+              Deklariert Abhängigkeiten und minimale Versionsanforderungen
+            </li>
+            <li class="fragment">
+              Probleme mit <strong>transitiven Abhängigkeiten</strong>
+            </li>
+            <li class="fragment">
+              Gefahr: unterschiedliche Umgebungen bei unterschiedlichen Zeiten
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Die Rolle der Sperrdatei</h2>
+          <p>Fixiert direkte und transitive Abhängigkeiten:</p>
+          <ul>
+            <li class="fragment">
+              Gleiche Pakete und Versionen für alle Nutzer
+            </li>
+            <li class="fragment">Umgebungen sind zuverlässig reproduzierbar</li>
+            <li class="fragment">Verhindert Fehler durch neue Versionen</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Beispiel: Sperrdatei</h2>
+          <ul>
+            <li class="fragment">
+              <strong>Bob</strong> erstellt und commitet eine funktionierende
+              Sperrdatei
+            </li>
+            <li class="fragment">
+              <strong>Alice</strong> nutzt die Sperrdatei für dieselbe Umgebung
+            </li>
+            <li class="fragment">
+              <strong>Dave</strong> aktualisiert die Sperrdatei für neue
+              Paketversionen
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Grenzen des Systems</h2>
+          <ul>
+            <li class="fragment">
+              Sperrdateien können manchmal nicht mehr funktionieren
+            </li>
+            <li class="fragment">Manuelle Problemanalyse oft nötig</li>
+            <li class="fragment">
+              Abhängigkeiten zu vermeiden, ist selten praktikabel
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <!-- Include Reveal.js and Highlight.js -->
+    <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+    <script>
+      Reveal.initialize();
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

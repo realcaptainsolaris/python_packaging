@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/reveal.js/dist/theme/black.css"
+      id="theme"
+    />
+    <!-- Include Highlight.js styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Standardwerkzeuge und Best Practices</h2>
+          <p>
+            <strong>Problem:</strong> Python-Standardtools fördern keine Best
+            Practices.
+          </p>
+          <ul>
+            <li class="fragment">
+              Andere Sprachen, wie Rust, nutzen integrierte Tools wie
+              <code>Cargo</code>.
+            </li>
+            <li class="fragment">
+              Python verwendet <code>pip</code>, das keinen Bezug zur
+              Versionsverwaltung hat.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Probleme mit <code>pip</code></h2>
+          <ul>
+            <li class="fragment">Unübersichtlichkeit bei vielen Paketen</li>
+            <li class="fragment">Kein Rollback zu früheren Umgebungen</li>
+            <li class="fragment">Gefahr, Systemanwendungen zu beschädigen</li>
+            <li class="fragment">
+              Virtuelle Umgebungen sind für Anfänger oft kompliziert
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>System- und Projektpakete</h2>
+          <ul>
+            <li class="fragment">
+              Zusätzliche Abhängigkeiten oft nicht über
+              <code>pip</code> installierbar
+            </li>
+            <li class="fragment">
+              Python-Interpreter als Beispiel für Systemabhängigkeit
+            </li>
+            <li class="fragment">
+              Schwierigkeit, mehrere Python-Versionen zu verwalten
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Fragmentierung im Ökosystem</h2>
+          <ul>
+            <li class="fragment">
+              Zwei große Ökosysteme: <code>pypi.org</code> +
+              <code>pip</code> vs. <code>anaconda.org</code> +
+              <code>Conda</code>
+            </li>
+            <li class="fragment">
+              Nicht alle Tools sind universell einsetzbar
+            </li>
+            <li class="fragment">Komplexität bei der Tool-Auswahl</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Drittanbieter-Tools</h2>
+          <ul>
+            <li class="fragment">
+              Viele Tools sind selbst in Python geschrieben
+            </li>
+            <li class="fragment">
+              Benötigen eine Python-Umgebung, um zu funktionieren
+            </li>
+            <li class="fragment">
+              Gefahr von Konflikten zwischen Tools und Projektabhängigkeiten
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Toolception</h2>
+          <ul>
+            <li class="fragment">Man benötigt Tools, um Tools zu verwalten</li>
+            <li class="fragment">Komplexe Abhängigkeitsketten entstehen</li>
+            <li class="fragment">
+              Erschwert die Reproduzierbarkeit und Automatisierung
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Ein Paradigmenwechsel</h2>
+          <p>Neue Entwicklungen:</p>
+          <ul>
+            <li class="fragment">Tools werden zunehmend in Rust geschrieben</li>
+            <li class="fragment">
+              Statisch verlinkte Binärdateien vermeiden Konflikte
+            </li>
+            <li class="fragment">Verbesserte Installation und Nutzung</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Zusammenfassung</h2>
+          <ul>
+            <li class="fragment">
+              Python-Tools fördern oft keine Best Practices
+            </li>
+            <li class="fragment">
+              Fragmentierung und Abhängigkeitsprobleme sind verbreitet
+            </li>
+            <li class="fragment">
+              Neue Ansätze wie Rust-Tools sind vielversprechend
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <!-- Include Reveal.js and Highlight.js -->
+    <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+    <script>
+      Reveal.initialize();
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

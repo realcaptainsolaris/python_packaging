@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Warum Abhängigkeitsmanagement?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/reveal.js/dist/theme/black.css"
+      id="theme"
+    />
+    <!-- Include Highlight.js styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Was ist eine Abhängigkeit?</h2>
+          <p>
+            <strong>Definition:</strong> Alles, was außerhalb deines Codes liegt
+            und notwendig ist, damit dieser wie erwartet funktioniert.
+          </p>
+        </section>
+
+        <section>
+          <h2>Projektspezifische Pakete</h2>
+          <ul>
+            <li class="fragment">Typische Python-Bibliotheken</li>
+            <li class="fragment">
+              Installiert mit <code>pip</code> oder anderen Paketmanagern
+            </li>
+            <li class="fragment">Beziehen sich direkt auf das Projekt</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Systempakete</h2>
+          <ul>
+            <li class="fragment">Globale Pakete oder Bibliotheken</li>
+            <li class="fragment">
+              Installiert mit <code>apt</code>, <code>homebrew</code>, etc.
+            </li>
+            <li class="fragment">
+              Von allen Nutzern und Projekten gemeinsam genutzt
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Betriebssystem</h2>
+          <ul>
+            <li class="fragment">Python läuft dank Plattform-Kompatibilität</li>
+            <li class="fragment">Bibliotheken können OS-spezifisch sein</li>
+            <li class="fragment">Systemoperationen variieren je nach OS</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Hardware</h2>
+          <ul>
+            <li class="fragment">
+              Abhängigkeit von Architektur (z. B. x86, arm64)
+            </li>
+            <li class="fragment">
+              Code kann für spezifische Hardware kompiliert sein
+            </li>
+            <li class="fragment">Beispiele: GPUs zur Beschleunigung</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Die Umgebung</h2>
+          <ul>
+            <li class="fragment">
+              Externe Ressourcen wie APIs oder Datenbanken
+            </li>
+            <li class="fragment">Netzwerkzugriff ist oft erforderlich</li>
+            <li class="fragment">
+              Außerhalb des eigenen Computers liegende Faktoren
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Die Komplexität erkennen</h2>
+          <ul>
+            <li class="fragment">
+              Dein Skript basiert auf einem komplexen Stack
+            </li>
+            <li class="fragment">
+              Lokale Entwicklung maskiert diese Komplexität
+            </li>
+            <li class="fragment">
+              Wird relevant bei der Nutzung auf anderen Rechnern
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Zusammenfassung</h2>
+          <p>Abhängigkeiten reichen von Paketen bis zur Hardware:</p>
+          <ul>
+            <li class="fragment">Projektspezifische Pakete</li>
+            <li class="fragment">Systempakete</li>
+            <li class="fragment">Betriebssystem und Hardware</li>
+            <li class="fragment">Umgebung und externe Ressourcen</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <!-- Include Reveal.js and Highlight.js -->
+    <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+    <script>
+      Reveal.initialize();
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Warum Abhängigkeitsmanagement?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/reveal.js/dist/theme/black.css"
+      id="theme"
+    />
+    <!-- Include Highlight.js styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Warum Abhängigkeitsmanagement?</h2>
+          <p>Der Hauptgrund: <strong>Reproduzierbarkeit</strong>.</p>
+          <ul>
+            <li class="fragment">
+              Exakte Ergebnisse bei identischen Schritten
+            </li>
+            <li class="fragment">Deterministisches Verhalten des Codes</li>
+            <li class="fragment">
+              Einheitliches Verhalten für alle Entwickler
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Phasen der Reproduzierbarkeit</h2>
+          <p>Reproduzierbarkeit ist entscheidend in:</p>
+          <ul>
+            <li class="fragment"><strong>Entwicklungsphase</strong></li>
+            <li class="fragment"><strong>Build-Phase</strong></li>
+            <li class="fragment"><strong>Bereitstellungsphase</strong></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Entwicklungsphase</h2>
+          <ul>
+            <li class="fragment">Einfaches Neuaufsetzen der Umgebung</li>
+            <li class="fragment">Identische Umgebungen im Team</li>
+            <li class="fragment">
+              Zusätzliche Abhängigkeiten: Linting, Formatierung
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Build-Phase</h2>
+          <ul>
+            <li class="fragment">
+              Erstellung von Artefakten (z. B. Docker-Container, Zip-Dateien)
+            </li>
+            <li class="fragment">Garantierte Konsistenz der Artefakte</li>
+            <li class="fragment">
+              Zusätzliche Abhängigkeiten: Compiler, Tool-Chains
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Bereitstellungsphase</h2>
+          <ul>
+            <li class="fragment">Vorhersagbares Verhalten in Produktion</li>
+            <li class="fragment">
+              Gleiche Ergebnisse wie in der Entwicklungsphase
+            </li>
+            <li class="fragment">Genaues Nachverfolgen der Abhängigkeiten</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Gutes Abhängigkeitsmanagement</h2>
+          <ul>
+            <li class="fragment">
+              Alle Abhängigkeiten werden explizit deklariert
+            </li>
+            <li class="fragment">
+              Versionierung & Nachverfolgbarkeit sind gewährleistet
+            </li>
+            <li class="fragment">
+              Automatisierte Prozesse für funktionierende Umgebungen
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Vorteile eines automatisierten Prozesses</h2>
+          <ul>
+            <li class="fragment">Einfache Weiterentwicklung</li>
+            <li class="fragment">Sichere Updates bei neuen Versionen</li>
+            <li class="fragment">
+              Kontrolle über den gesamten Abhängigkeitsstapel
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Fokus in diesem Tutorial</h2>
+          <p>Wir konzentrieren uns auf:</p>
+          <ul>
+            <li class="fragment">
+              Software-Abhängigkeiten bis Betriebssystem-Ebene
+            </li>
+            <li class="fragment">Wichtige Werkzeuge und Best Practices</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <!-- Include Reveal.js and Highlight.js -->
+    <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+    <script>
+      Reveal.initialize();
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
