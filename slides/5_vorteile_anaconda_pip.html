@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Warum Abhängigkeitsmanagement?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/reveal.js/dist/theme/black.css"
+      id="theme"
+    />
+    <!-- Include Highlight.js styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+    <section>
+    <h1>Vorteile von Anaconda vs. pip</h1>
+    <p>Eine Analyse der Entwicklung von Python-Umgebungen</p>
+    </section>
+
+    <section>
+    <h2>1. Was ist Anaconda?</h2>
+    <ul>
+    <li>Plattform für Datenwissenschaft und maschinelles Lernen</li>
+    <li>Integrierte Distribution von Python und R</li>
+    <li>Beinhaltet zahlreiche Pakete und ein eigenes Paketmanagementsystem (conda)</li>
+    </ul>
+    </section>
+
+    <section>
+    <h2>2. Was ist pip?</h2>
+    <ul>
+    <li>Python-eigenes Paketmanagementsystem</li>
+    <li>Leichtgewichtig und fokussiert auf Python-Pakete</li>
+    <li>Integriert in Python-Installationen seit Version 2.7.9/3.4</li>
+    </ul>
+    </section>
+
+    <section>
+    <h2>3. Vorteile von Anaconda</h2>
+    <ul>
+    <li>Einfach zu bedienen für Anfänger</li>
+    <li>Liefert vorkompilierte Pakete für numerische Berechnungen</li>
+    <li>Inklusive einer grafischen Benutzeroberfläche (Anaconda Navigator)</li>
+    <li>Virtuelle Umgebungen mit <code>conda</code> erstellen und verwalten</li>
+    </ul>
+    </section>
+
+    <section>
+    <h2>4. Vorteile von pip</h2>
+    <ul>
+    <li>Flexibilität: Nur Python-Pakete</li>
+    <li>Integration in Python-Ökosystem</li>
+    <li>Leicht und ressourcenschonend</li>
+    <li>Unterstützt PyPI (Python Package Index)</li>
+    </ul>
+    </section>
+
+    <section>
+    <h2>5. Warum Anaconda einst dominierte</h2>
+    <ul>
+    <li>Lösung für die Verteilung von Hochleistungs-Binaries</li>
+    <li>Einfachere Einrichtung für datenwissenschaftliche Projekte</li>
+    <li>Große Community und Unterstützung</li>
+    </ul>
+    </section>
+
+  <section>
+  <h2>6. Technologischer Fortschritt: pip heute</h2>
+  <ul>
+  <li>pip kann nun Hochleistungs-Binaries verteilen</li>
+  <li>Integration von Tools wie <code>devcontainers</code></li>
+  <li>Stärkere Flexibilität und Zuverlässigkeit</li>
+  </ul>
+  </section>
+
+  <section>
+  <h2>7. Warum die Vorteile von Anaconda heute nicht mehr gelten</h2>
+  <ul>
+  <li>Komplexität von Anaconda-Umgebungen</li>
+  <li>pip ist leichter, flexibler und moderner</li>
+  <li>Tools wie Docker und devcontainers machen Anaconda überflüssig</li>
+  </ul>
+  </section>
+
+  <section>
+  <h2>8. Beispiel: Pip + Devcontainer</h2>
+  <pre><code class="python">
+# Devcontainer-Konfiguration
+  {
+  "image": "python:3.11",
+  "extensions": ["ms-python.python"],
+  "settings": {
+      "python.pythonPath": "/usr/local/bin/python"
+  }
+  }
+  </code></pre>
+  </section>
+
+
+     </div>
+    </div>
+
+    <!-- Include Reveal.js and Highlight.js -->
+    <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+    <script>
+      Reveal.initialize();
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

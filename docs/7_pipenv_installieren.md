@@ -80,3 +80,4 @@ Nach der Installation können Sie Pipenv verwenden, um eine neue virtuelle Umgeb
 
    ```bash
    exit
+   ```

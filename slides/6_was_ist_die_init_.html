@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Warum Abhängigkeitsmanagement?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/reveal.js/dist/theme/black.css"
+      id="theme"
+    />
+    <!-- Include Highlight.js styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+
+<section>
+  <h1>Was ist die <code>__init__.py</code>?</h1>
+  <p>Grundlagen und Anwendungsfälle in Python</p>
+</section>
+
+<section>
+  <h2>1. Definition</h2>
+  <ul>
+    <li>Eine spezielle Datei in Python</li>
+    <li>Markiert ein Verzeichnis als Python-Paket</li>
+    <li>Ohne sie ist das Verzeichnis kein gültiges Paket (vor Python 3.3)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>2. Ein einfaches Beispiel</h2>
+  <pre><code class="python">
+  # Verzeichnisstruktur
+  # my_package/
+  # ├── __init__.py
+  # ├── module1.py
+  # ├── module2.py
+  
+  # __init__.py
+  print("Paket geladen!")
+  </code></pre>
+</section>
+
+<section>
+  <h2>3. Import von Modulen</h2>
+  <pre><code class="python">
+  # module1.py
+  def hello():
+      print("Hallo aus module1!")
+  
+  # Import
+  from my_package.module1 import hello
+  hello()  # Ausgabe: Hallo aus module1!
+  </code></pre>
+</section>
+
+<section>
+  <h2>4. Steuerung von Paket-Importen</h2>
+  <pre><code class="python">
+  # __init__.py
+  __all__ = ["module1"]
+
+  # Nur module1 wird importiert
+  from my_package import *
+  </code></pre>
+</section>
+
+<section>
+  <h2>5. Initialisierungscode</h2>
+  <pre><code class="python">
+  # __init__.py
+  import os
+
+  CONFIG_PATH = os.getenv("CONFIG_PATH", "/default/path")
+  print(f"Konfigurationspfad: {CONFIG_PATH}")
+  </code></pre>
+</section>
+
+<section>
+  <h2>6. Verwendung als Schnittstelle</h2>
+  <pre><code class="python">
+  # __init__.py
+  from .module1 import hello
+  from .module2 import goodbye
+  
+  # Aufrufe aus dem Paket
+  hello()
+  goodbye()
+  </code></pre>
+</section>
+
+<section>
+  <h2>7. Leer lassen – ist das okay?</h2>
+  <p>Ja! Eine leere <code>__init__.py</code>-Datei markiert das Verzeichnis dennoch als Paket.</p>
+  <pre><code class="python">
+  # __init__.py
+  # (leer)
+  
+  from my_package import module1
+  </code></pre>
+</section>
+
+<section>
+  <h2>8. Namespace-Pakete (ab Python 3.3)</h2>
+  <p>Ohne <code>__init__.py</code> kann ein Paket dennoch existieren.</p>
+  <pre><code class="python">
+  # Verzeichnisstruktur
+  # namespace_package/
+  # ├── module1.py
+  # ├── module2.py
+  
+  # Import funktioniert trotzdem
+  from namespace_package import module1
+  </code></pre>
+</section>
+
+<section>
+  <h2>9. Beispiel: Paket-Bündelung</h2>
+  <pre><code class="python">
+  # __init__.py
+  from .module1 import hello as hello1
+  from .module2 import hello as hello2
+  
+  # Bündelzugriff
+  hello1()
+  hello2()
+  </code></pre>
+</section>
+
+<section>
+  <h2>10. Fazit</h2>
+  <ul>
+    <li><code>__init__.py</code> ist flexibel und mächtig</li>
+    <li>Ermöglicht Paketstruktur, Initialisierung und Steuerung</li>
+    <li>Ab Python 3.3 nicht immer notwendig</li>
+  </ul>
+</section>
+
+     </div>
+    </div>
+
+    <!-- Include Reveal.js and Highlight.js -->
+    <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+    <script>
+      Reveal.initialize();
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

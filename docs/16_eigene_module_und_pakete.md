@@ -76,11 +76,13 @@ mein_paket/
    print(modul2.funktion2())  # Ausgabe: Dies ist Funktion 2 in Modul 2
    ```
 
-   Alternativ können Sie auch `from mein_paket.modul1 import funktion1` verwenden, um nur eine bestimmte Funktion zu importieren.
+   Alternativ können Sie auch `from mein_paket.modul1 import funktion1` verwenden, um nur eine bestimmte Funktion zu importieren. Dies bietet allerdings keinen Gewinn hinsichtlich Speicherverbrauch. Auch wenn nur eine Funktion importiert wird, wird das gesamte Modul geladen. Vorteil ist hier lediglich der Zugriff auf die funktion ohne den Modul-Nampespace.
 
 ## 3. Erstellen eines installierbaren Python-Pakets
 
-Wenn Sie Ihr Paket als installierbares Python-Paket verteilen möchten, müssen Sie zusätzliche Dateien hinzufügen. Die gängigste Methode ist die Nutzung von `setuptools` und einer `setup.py`-Datei.
+Wenn Sie Ihr Paket als installierbares Python-Paket verteilen möchten, müssen Sie zusätzliche Dateien hinzufügen. Die gängigste Methode war lange Zeit die Nutzung von `setuptools` und einer `setup.py`-Datei.
+
+Heute wird eine pyproject.toml Datei bevorzugt.
 
 ### Projektstruktur für ein installierbares Paket
 
@@ -101,19 +103,16 @@ mein_projekt/
 Die `setup.py` ist eine Konfigurationsdatei für `setuptools`, die die Metadaten des Pakets und Installationsanweisungen enthält:
 
 ```python
-# setup.py
+# pyroject.toml 
 
-from setuptools import setup, find_packages
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
 
-setup(
-    name="mein_paket",
-    version="0.1",
-    packages=find_packages(),
-    description="Ein Beispiel-Python-Paket",
-    author="Ihr Name",
-    author_email="email@beispiel.com",
-    install_requires=[],
-)
+[project]
+name = "my-project"
+version = "1.2.3"
+
 ```
 
 ### Installation des Pakets
