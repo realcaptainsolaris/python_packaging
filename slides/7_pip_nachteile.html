@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Warum Abhängigkeitsmanagement?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reveal.css" />
+    <link
+      rel="stylesheet"
+      href="black.css"
+      id="theme"
+    />
+    <!-- Include Highlight.js styles -->
+    <link
+      rel="stylesheet"
+      href="highlight.css"
+    />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+<section>
+  <h2>Nachteile von <code>pip</code></h2>
+  <ul>
+    <li>Schwierig für komplexe Umgebungen mit vielen Abhängigkeiten</li>
+    <li>Keine eingebauten Werkzeuge für die Verwaltung von virtuellen Umgebungen</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Nachteile von <code>pip freeze</code></h2>
+  <ul>
+    <li>Listet nur installierte Pakete auf, keine Unterscheidung zwischen direkten und indirekten Abhängigkeiten</li>
+    <li>Kann alte, nicht mehr benötigte Pakete in der Liste behalten</li>
+    <li>Erzeugt nicht immer ein replizierbares Setup</li>
+    <li>Keine Unterstützung für automatische Updates oder Abhängigkeitsverwaltung</li>
+  </ul>
+</section>
+
+
+
+     </div>
+    </div>
+
+   <!-- Include Reveal.js and Highlight.js -->
+    <script src="reveal.js"></script>
+    <script src="highlight.min.js"></script>
+    <script src="python.min.js"></script>
+    <script>
+      Reveal.initialize();
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

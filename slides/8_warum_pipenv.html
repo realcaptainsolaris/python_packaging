@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Warum pipenv nutzen?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reveal.css" />
+    <link
+      rel="stylesheet"
+      href="black.css"
+      id="theme"
+    />
+    <!-- Include Highlight.js styles -->
+    <link
+      rel="stylesheet"
+      href="highlight.css"
+    />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+<section>
+  <h2>Warum Pipenv verwenden?</h2>
+  <p>Pipenv vereint <code>pip</code>, <code>virtualenv</code> und <code>pip-tools</code> in einem Tool und vereinfacht die Verwaltung von Python-Umgebungen erheblich.</p>
+  <p>Ziele:</p>
+  <ul>
+    <li>Verbesserung des Entwicklungsprozesses</li>
+    <li>Optimierte Verwaltung von Abhängigkeiten</li>
+    <li>Reproduzierbare Builds</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Automatisches Erstellen virtueller Umgebungen</h2>
+  <p>Pipenv erstellt und verwaltet virtuelle Umgebungen automatisch für jedes Projekt.</p>
+  <p>Vorteile:</p>
+  <ul>
+    <li>Isolation der Abhängigkeiten</li>
+    <li>Organisierte Paketverwaltung</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Vorteil: Pipfile und Pipfile.lock</h2>
+  <p>Statt <code>requirements.txt</code> nutzt Pipenv:</p>
+  <ul>
+    <li><strong>Pipfile</strong>: Definiert Abhängigkeiten.</li>
+    <li><strong>Pipfile.lock</strong>: Hält exakte Paketversionen fest.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Entwicklungs- vs. Produktionsabhängigkeiten</h2>
+  <p>Pipenv unterscheidet zwischen:</p>
+  <ul>
+    <li><strong>Entwicklungsabhängigkeiten</strong> (z. B. Test-Tools).</li>
+    <li><strong>Produktionsabhängigkeiten</strong> (z. B. Libraries).</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Integrierte Sicherheitstests</h2>
+  <p>Pipenv prüft installierte Pakete auf Sicherheitsprobleme:</p>
+  <ul>
+    <li>Warnungen bei Schwachstellen.</li>
+    <li>Erhöhte Sicherheit der Umgebung.</li>
+  </ul>
+  <code>pipenv check</code>
+</section>
+
+<section>
+  <h2>Einfache Bedienung</h2>
+  <p>Pipenv ist leicht zu bedienen:</p>
+  <ul>
+    <li><code>pipenv install</code>: Abhängigkeiten installieren.</li>
+    <li><code>pipenv shell</code>: Virtuelle Umgebung betreten.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Wann sollte man Pipenv verwenden?</h2>
+  <p>Geeignet für:</p>
+  <ul>
+    <li>Kleine bis mittelgroße Projekte.</li>
+    <li>Projekte mit klarer Abhängigkeitstrennung.</li>
+    <li>Reproduzierbare Setups.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Pipenv ist ideal für:</h2>
+  <ul>
+    <li>Entwickler, die Abhängigkeiten klar definieren wollen.</li>
+    <li>Teams mit konsistenten Setups für Dev und Produktion.</li>
+    <li>Sicherheitsbewusste Python-Projekte.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Zusammenfassung</h2>
+  <p>Pipenv:</p>
+  <ul>
+    <li>Vereinfacht das Management von Python-Umgebungen.</li>
+    <li>Sorgt für reproduzierbare, sichere Setups.</li>
+  </ul>
+</section>
+
+
+
+
+     </div>
+    </div>
+
+   <!-- Include Reveal.js and Highlight.js -->
+    <script src="reveal.js"></script>
+    <script src="highlight.min.js"></script>
+    <script src="python.min.js"></script>
+    <script>
+      Reveal.initialize();
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
