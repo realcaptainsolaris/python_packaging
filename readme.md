@@ -9,12 +9,12 @@ enthalten.
 - 3 Warum ist Dependency so schwer?
 
 
-## Powerpoints
+## pdfs 
 
 - 0_pip: Was ist pip 
 - 1_virtuelle_umgebung
 - 2_pipenv_einführung
 - 3_pipenv_virtuelle Umgebungen
 - 4_pipenv_run_shell
+- 
 
-## Docs

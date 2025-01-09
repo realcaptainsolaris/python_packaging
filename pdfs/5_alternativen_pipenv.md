@@ -168,12 +168,10 @@ Im Endeffekt kommt es darauf an, welche Anforderungen dein Projekt und dein Team
 ---
 
 ### Weiterführende Links
+- [Uv](https://astral.sh/blog/uv)
 - [Poetry Doku](https://python-poetry.org/docs/)  
 - [pip-tools Repo](https://github.com/jazzband/pip-tools)  
 - [Conda Doku](https://docs.conda.io/en/latest/)  
 - [Hatch Doku](https://ofek.dev/hatch/latest/)  
 - [PyPA Tools Übersicht](https://packaging.python.org/key_projects/)
 
----
-
-**Viel Erfolg bei der Wahl und Verwendung deines Paket- und Environment-Managers!**  
